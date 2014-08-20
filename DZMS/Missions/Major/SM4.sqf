@@ -11,7 +11,7 @@ _missName = "Helicopter Landing";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"A Supply Helicopter has been Forced to Land!\nStop the Bandits from Taking Control of it!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"A supply helicopter has been forced to land!\nStop the bandits from taking control of it!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
@@ -44,13 +44,13 @@ _crate2 = createVehicle ["USLaunchersBox",[(_coords select 0) - 7.1718,(_coords 
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[[(_coords select 0) - 8.4614,(_coords select 1) - 5.0527,0],6,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 8.4614,(_coords select 1) - 5.0527,0],6,4,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) - 8.4614,(_coords select 1) - 5.0527,0],4,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 8.4614,(_coords select 1) - 5.0527,0],4,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 7.5337,(_coords select 1) + 4.2656,0],4,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 7.5337,(_coords select 1) + 4.2656,0],4,4,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 7.5337,(_coords select 1) + 4.2656,0],4,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 7.5337,(_coords select 1) + 4.2656,0],4,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
 
 //Wait until the player is within 30 meters and also meets the kill req

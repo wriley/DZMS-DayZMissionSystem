@@ -5,18 +5,18 @@
 
 ///////////////////////////////////////////////////////////////////////
 // Do you want your players to gain humanity from killing mission AI?
-DZMSMissHumanity = true;
+DZMSMissHumanity = false;
 
 // How Much Humanity?
 DZMSCntHumanity = 25;
 
 // Do You Want AI to use NVGs?
 //(They are deleted on death)
-DZMSUseNVG = true;
+DZMSUseNVG = false;
 
 // Do you want AI to use RPG7V's?
 //(Only one unit per group spawn will have one)
-DZMSUseRPG = false;
+DZMSUseRPG = true;
 
 // Do you want AI kills to count as bandit kills?
 DZMSCntBanditKls = true;
@@ -26,20 +26,20 @@ DZMSCleanDeath = false;
 
 // Do you want AI that players run over to not have gear?
 // (If DZMSCleanDeath is true, this doesn't matter)
-DZMSRunGear = false;
+DZMSRunGear = true;
 
 // How long before bodies disappear? (in seconds) (default = 2400)
 DZMSBodyTime = 2400;
 
 // Percentage of AI that must be dead before mission completes (default = 0)
 //( 0 is 0% of AI / 0.50 is 50% / 1 is 100% )
-DZMSRequiredKillPercent = 0;
+DZMSRequiredKillPercent = 1;
 
 // How long in seconds before mission scenery disappears (default = 1800 / 0 = disabled)
 DZMSSceneryDespawnTimer = 1800;
 
 // Should crates despawn with scenery? (default = false)
-DZMSSceneryDespawnLoot = false;
+DZMSSceneryDespawnLoot = true;
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // You can adjust the weapons that spawn in weapon crates inside DZMSWeaponCrateList.sqf
@@ -86,8 +86,8 @@ Minor missions have less AI than Major missions, but have crates that reflect th
 Below is the array of mission file names and the minimum and maximum times they run.
 Do not edit the Arrays unless you know what you are doing.
 */
-DZMSMajorArray = ["SM1","SM2","SM3","SM4","SM5","SM6"];
-DZMSMinorArray = ["SM1","SM2","SM3","SM4","SM5","SM6"];
+DZMSMajorArray = ["EM1","SM1","SM2","SM3","SM4","SM5","SM6"];
+DZMSMinorArray = ["EM1","SM1","SM2","SM3","SM4","SM5","SM6"];
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 // The Minumum time in seconds before a major mission will run.
@@ -110,7 +110,8 @@ DZMSMinorMax = 990;
 // format: [[x,y,z],radius]
 // Ex: [[06325,07807,0],300] //Starry Sobor
 DZMSBlacklistZones = [
-	[[0,0,0],50]
+	[[0,0,0],50],
+	[[06325,07807,0],800] //Starry Sobor
 ];
 
 /*=============================================================================================*/

@@ -7,7 +7,7 @@
 
 ///////////////////////////////////////////////
 // Array of skin classnames for the AI to use
-DZMSBanditSkins = ["Bandit1_DZ","BanditW1_DZ"];
+DZMSBanditSkins = ["Bandit1_DZ","BanditW1_DZ","BanditW2_DZ","Camo1_DZ","Sniper1_DZ","Soldier1_DZ","Survivor2_DZ","SurvivorW2_DZ","GUE_Soldier_MG_DZ","GUE_Soldier_Sniper_DZ","GUE_Soldier_Crew_DZ","GUE_Soldier_2_DZ","RU_Policeman_DZ","Pilot_EP1_DZ","Haris_Press_EP1_DZ","Ins_Soldier_GL_DZ","GUE_Commander_DZ","Functionary1_EP1_DZ","Priest_DZ","Rocker1_DZ","Rocker2_DZ","Rocker3_DZ","Rocker4_DZ","TK_INS_Warlord_EP1_DZ","TK_INS_Soldier_EP1_DZ","Soldier_Sniper_PMC_DZ","Soldier_TL_PMC_DZ","FR_OHara_DZ","FR_Rodriguez_DZ","CZ_Soldier_Sniper_EP1_DZ","Graves_Light_DZ","Bandit2_DZ","SurvivorWcombat_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","Soldier_Bodyguard_AA12_PMC_DZ","GUE_Soldier_CO_DZ"];
 
 ////////////////////////
 // Array of AI Skills
@@ -63,53 +63,59 @@ DZMSSkills3 = [
 	["general",0.80,1.00]
 ];
 
+DZMSSkills4 = [	
+	["aimingAccuracy",0.30,0.25],
+	["aimingShake",0.90,0.95],
+	["aimingSpeed",0.90,0.90],
+	["endurance",0.90,0.90],
+	["spotDistance",0.85,0.85],
+	["spotTime",0.85,0.85],
+	["courage",0.90,1.00],
+	["reloadSpeed",0.90,0.90],
+	["commanding",0.90,0.90],
+	["general",0.90,1.00]
+];
+
+DZMSSkills5 = [	
+	["aimingAccuracy",0.5,0.25],
+	["aimingShake",0.99,0.95],
+	["aimingSpeed",0.99,0.90],
+	["endurance",0.99,0.90],
+	["spotDistance",0.99,0.85],
+	["spotTime",0.99,0.85],
+	["courage",0.99,1.00],
+	["reloadSpeed",0.99,0.90],
+	["commanding",0.99,0.90],
+	["general",0.99,1.00]
+];
+
 //////////////////////////////////////////////////////////////
 // This is the primary weaponlist that can be assigned to AI
 // These are assigned based on AI difficulty level
 DZMSWeps0 = [
 "M16A2",
-"M16A2GL",
 "AK_74",
-"M4A1_Aim",
-"AKS_74_kobra",
 "AKS_74_U",
-"AK_47_M",
-"M24",
 "M1014",
-"DMR_DZ",
 "M4A1",
-"M14_EP1",
 "Remington870_lamp",
-"MP5A5",
-"MP5SD",
-"M4A3_CCO_EP1"
+"Sa58P_EP1",
+"Sa58V_EP1"
 ];
 
 DZMSWeps1 = [
 "M16A2",
 "M16A2GL",
-"M249_DZ",
 "AK_74",
 "M4A1_Aim",
 "AKS_74_kobra",
 "AKS_74_U",
 "AK_47_M",
-"M24",
-"SVD_CAMO",
 "M1014",
-"DMR_DZ",
 "M4A1",
-"M14_EP1",
 "Remington870_lamp",
-"M240_DZ",
 "M4A1_AIM_SD_camo",
-"M16A4_ACG",
-"M4A1_HWS_GL_camo",
-"Mk_48_DZ",
-"M4A3_CCO_EP1",
-"Sa58V_RCO_EP1",
 "Sa58V_CCO_EP1",
-"M40A3",
 "Sa58P_EP1",
 "Sa58V_EP1"
 ];
@@ -118,7 +124,7 @@ DZMSWeps2 = [
 "FN_FAL",
 "FN_FAL_ANPVS4",
 "Mk_48_DZ",
-"M249_DZ",
+"M249_EP1_DZ",
 "BAF_L85A2_RIS_Holo",
 "G36C",
 "G36C_camo",
@@ -126,9 +132,6 @@ DZMSWeps2 = [
 "G36K_camo",
 "AK_47_M",
 "AKS_74_U",
-"M14_EP1",
-"bizon_silenced",
-"DMR_DZ",
 "RPK_74"
 ];
 
@@ -136,7 +139,7 @@ DZMSWeps3 = [
 "FN_FAL",
 "FN_FAL_ANPVS4",
 "Mk_48_DZ",
-"M249_DZ",
+"M249_EP1_DZ",
 "BAF_L85A2_RIS_Holo",
 "G36C",
 "G36C_camo",
@@ -145,9 +148,32 @@ DZMSWeps3 = [
 "AK_47_M",
 "AKS_74_U",
 "M14_EP1",
-"bizon_silenced",
 "DMR_DZ",
 "RPK_74"
+];
+
+DZMSWeps4 = [
+"FN_FAL",
+"FN_FAL_ANPVS4",
+"Mk_48_DZ",
+"M249_EP1_DZ",
+"BAF_L85A2_RIS_Holo",
+"G36C",
+"G36C_camo",
+"G36A_camo",
+"G36K_camo",
+"AK_47_M",
+"AKS_74_U",
+"M14_EP1",
+"DMR_DZ",
+"RPK_74"
+];
+
+DZMSWeps5 = [
+"DMR_DZ",
+"SVD",
+"SVD_CAMO",
+"KSVK_DZE"
 ];
 
 /////////////////////////////////////////////////////////////
@@ -159,23 +185,23 @@ DZMSGear0 = [
 ];
 
 DZMSGear1 = [
-["ItemBandage","ItemBandage","ItemPainkiller"],
-["ItemKnife","ItemFlashlight"]
+["ItemBandage","ItemBandage","ItemPainkiller","ItemSodaCoke"],
+["ItemToolbox","ItemHatchet"]
 ];
 
 DZMSGear2 = [
-["ItemBandage","ItemBandage","ItemPainkiller"],
-["ItemKnife","ItemFlashlight"]
+["ItemBandage","ItemBandage","ItemPainkiller","FoodCanSardines"],
+["ItemKnife","ItemCompass"]
 ];
 
 DZMSGear3 = [
-["ItemBandage","ItemBandage","ItemPainkiller"],
-["ItemKnife","ItemFlashlight"]
+["ItemBandage","ItemBandage","ItemMorphine"],
+["ItemCrowbar","ItemMap"]
 ];
 
 DZMSGear4 = [
-["ItemBandage","ItemBandage","ItemPainkiller"],
-["ItemKnife","ItemFlashlight"]
+["ItemBandage","ItemBandage","ItemEpinephrine","ItemWaterbottleBoiled"],
+["ItemKnife","ItemMatchbox"]
 ];
 
 ////////////////////////////////////////////////////////////
@@ -188,5 +214,8 @@ DZMSPacklist = [
 "DZ_TK_Assault_Pack_EP1",
 "DZ_British_ACU",
 "DZ_CivilBackpack_EP1",
-"DZ_Backpack_EP1"
+"DZ_Backpack_EP1",
+"DZ_TerminalPack_EP1",
+"DZ_GunBag_EP1",
+"DZ_LargeGunBag_EP1"
 ];

@@ -11,7 +11,7 @@ _missName = "Supply Drop";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"An AN-2 with Bandit Supplies is Flying In!\nGet to the Location and Capture the Package!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"An AN-2 with bandit supplies is flying in!\nGet to the location and capture the package!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
@@ -48,11 +48,11 @@ sleep 5;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[_coords,6,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[_coords,6,4,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[_coords,6,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[_coords,6,4,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[_coords,4,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[_coords,4,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
 
 _loop = true;

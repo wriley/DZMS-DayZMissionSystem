@@ -11,7 +11,7 @@ _missName = "Ural Ambush";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"Bandits have Ambushed a Ural Carrying Supplies!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"Bandits have ambushed a Ural carrying supplies!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
@@ -62,11 +62,11 @@ _crate3 setDir -27.93351;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[[(_coords select 0) - 6.9458,(_coords select 1) - 3.5352, 0],6,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 6.9458,(_coords select 1) - 3.5352, 0],6,4,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 4.4614,(_coords select 1) + 2.5898, 0],6,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 4.4614,(_coords select 1) + 2.5898, 0],6,4,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 4.4614,(_coords select 1) + 2.5898, 0],4,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 4.4614,(_coords select 1) + 2.5898, 0],4,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
 
 //Wait until the player is within 30 meters and also meets the kill req

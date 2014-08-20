@@ -11,7 +11,7 @@ _missName = "Bandit Medical Camp";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"Bandits have Opened a Medical Camp!\nStop Them from Re-Supplying the Region!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"Bandits have opened a medical camp!\nStop them from re-supplying the region!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
@@ -102,13 +102,13 @@ _crate = createVehicle ["USLaunchersBox",[(_coords select 0) - 6.8277, (_coords 
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],2,4,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) - 0.5635,(_coords select 1) + 0.3173,0],3,3,"DZMSUnitsMajor"] call DZMSAISpawn;
 
 
 //Wait until the player is within 30 meters and also meets the kill req

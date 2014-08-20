@@ -10,20 +10,20 @@ _missName = "Bandit Squad";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"A Bandit Squad has been spotted!\nStop them from completing their patrol!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"A bandit squad has been spotted!\nStop them from completing their patrol!", "PLAIN",10] call RE;
 
 //DZMSAddMinMarker is a simple script that adds a marker to the location
 [_coords,_missName] ExecVM DZMSAddMinMarker;
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[_coords,2,1,"DZMSUnitsMinor"] call DZMSAISpawn;
+[_coords,2,3,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 5;
-[_coords,2,1,"DZMSUnitsMinor"] call DZMSAISpawn;
+[_coords,2,4,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 5;
-[_coords,2,1,"DZMSUnitsMinor"] call DZMSAISpawn;
+[_coords,2,3,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 5;
-[_coords,2,1,"DZMSUnitsMinor"] call DZMSAISpawn;
+[_coords,2,4,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 1;
 
 //Wait until the player is within 30 meters and also meets the kill req

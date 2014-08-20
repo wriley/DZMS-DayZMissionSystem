@@ -96,6 +96,8 @@ for "_x" from 1 to _unitcount do {
 		case 1: {_aicskill = DZMSSkills1;};
 		case 2: {_aicskill = DZMSSkills2;};
 		case 3: {_aicskill = DZMSSkills3;};
+		case 4: {_aicskill = DZMSSkills4;};
+		case 5: {_aicskill = DZMSSkills5;};
 	};
 	
 	{

@@ -11,7 +11,7 @@ _missName = "NATO Weapons Cache";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"Bandits have Overrun a NATO Weapons Cache!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"Bandits have overrun a NATO weapons cache!", "PLAIN",10] call RE;
 
 //DZMSAddMajMarker is a simple script that adds a marker to the location
 [_coords,_missname] ExecVM DZMSAddMajMarker;
@@ -44,13 +44,13 @@ _crate3 = createVehicle ["AmmoBoxSmall_556",[(_coords select 0) + 4.0996,(_coord
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],6,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],6,4,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],6,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],6,4,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],4,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],4,4,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
-[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],4,1,"DZMSUnitsMajor"] call DZMSAISpawn;
+[[(_coords select 0) + 0.0352,(_coords select 1) - 6.8799, 0],4,4,"DZMSUnitsMajor"] call DZMSAISpawn;
 sleep 5;
 
 //Wait until the player is within 30 meters and also meets the kill req

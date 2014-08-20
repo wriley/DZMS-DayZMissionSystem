@@ -10,7 +10,7 @@ _missName = "Helicopter Crash";
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"A Helicopter has Crashed!\nGo Check for Survivors!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"A helicopter has crashed!\nGo check for survivors!", "PLAIN",10] call RE;
 
 //DZMSAddMinMarker is a simple script that adds a marker to the location
 [_coords,_missName] ExecVM DZMSAddMinMarker;
@@ -28,11 +28,11 @@ _crate = createVehicle ["USLaunchersBox",[(_coords select 0) - 6, _coords select
 
 //DZMSAISpawn spawns AI to the mission.
 //Usage: [_coords, count, skillLevel, unitArray]
-[_coords,3,1,"DZMSUnitsMinor"] call DZMSAISpawn;
+[_coords,3,3,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 1;
-[_coords,3,1,"DZMSUnitsMinor"] call DZMSAISpawn;
+[_coords,3,4,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 1;
-[_coords,3,1,"DZMSUnitsMinor"] call DZMSAISpawn;
+[_coords,3,2,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 1;
 
 //Wait until the player is within 30 meters and also meets the kill req
